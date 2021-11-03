@@ -54,7 +54,7 @@ function App() {
       <div className="app-title">
         <h1> Calculateur de Gains Rollercoin </h1>
       </div>
-      <form>
+      <form className"dataForm">
         <input type="text" id="previousGain" placeholder="Gains antérieurs" />
         <input type="text" id="powerGain" placeholder="Gains actuels" />
         <input type="text" id="result" value={currentSum} readOnly />
