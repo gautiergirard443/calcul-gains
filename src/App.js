@@ -13,7 +13,7 @@ function App() {
     document.querySelector("#previousGain").value = "";
     document.querySelector("#powerGain").value = "";
   }, []);
-// oui test gith
+  // oui test gith
   // Et une autre fois lorsque l'on déclenche la fonction clear
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
     //if (newGain == "") return;
 
     let sum = newGain - parseInt(anteGain);
-    
+
     setCurrentSum(sum);
     setNewSum(newGain);
 
@@ -54,10 +54,16 @@ function App() {
       <div className="app-title">
         <h1> Calculateur de Gains Rollercoin </h1>
       </div>
-      <form className"dataForm">
+      <form className="dataForm">
         <input type="text" id="previousGain" placeholder="Gains antérieurs" />
         <input type="text" id="powerGain" placeholder="Gains actuels" />
-        <input type="text" id="result" value={currentSum} readOnly />
+        <input
+          type="text"
+          id="result"
+          placeholder="Gains en Mghz/S"
+          value={currentSum}
+          readOnly
+        />
         <button onClick={Add}>Add</button>
         <button onClick={Clear}>Clear</button>
       </form>
